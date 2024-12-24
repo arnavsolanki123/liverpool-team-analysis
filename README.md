@@ -4,14 +4,9 @@
 
 This repository contains a set of SQL queries used to analyze the performance and statistics of a specific football team, in this case, Liverpool. Below are the queries categorized by the type of analysis they perform:
 
-## Query 1: Identify the Team Being Analyzed
-```sql
-SELECT name, teamid 
-FROM teams
-WHERE name = 'Liverpool';
-```
 
-## Query 2: Team Performance Metrics
+
+## Query 1: Team Performance Metrics
 ```sql
 SELECT t.name,
        SUM(CASE WHEN result = 'W' THEN 1 ELSE 0 END) AS win, 
@@ -32,7 +27,7 @@ WHERE t.teamid = 87
 GROUP BY t.season;
 ```
 
-## Query 4: Season Wins and Losses Comparison
+## Query 4: Season Wise performance Comparison
 ```sql
 SELECT t1.season,
        SUM(CASE WHEN result = 'W' THEN 1 ELSE 0 END) AS win, 
@@ -43,7 +38,7 @@ WHERE t1.teamid = 87
 GROUP BY t1.season;
 ```
 
-## Query 5: Results as a Home Team
+## Query 5: performance as a Home Team analysis
 ```sql
 SELECT gameid, season, 
        (CASE 
@@ -55,7 +50,7 @@ FROM games
 WHERE homeTeamID = 87;
 ```
 
-## Query 6: Results as an Away Team
+## Query 6: performance as an Away Team analysis
 ```sql
 SELECT gameid, season, 
        (CASE 
