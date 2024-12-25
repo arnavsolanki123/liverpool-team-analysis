@@ -1,6 +1,6 @@
 # liverpool-team-analysis
 
-# Team Analysis SQL Queries
+# football Team Analysis SQL Queries
 
 This repository contains a set of SQL queries used to analyze the performance and statistics of a specific football team, in this case, Liverpool. Below are the queries categorized by the type of analysis they perform:
 
